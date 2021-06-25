@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacte</title>
+    <link rel="stylesheet" href="..//css/contact.css">
+</head>
+
+<body>
+<header>
+    <h6>Page Contact:</h6>
+
+     <img src="images/jarditou_logo.jpg" alt="" width="10%">  Tout le jardin
+
+     <h6>La qualilé depuis 70 ans</h6>
+     <nav>
+   <ul>
+       <li> <a href="index.html">Accueil</a> </li>
+       <li><a href="tableau.html">Tableau</a></li>
+       <li><a href="contact.html">Contact</a></li>
+     </ul>    
+    </nav>
+   <img src="..//html/images/promotion.jpg" alt="promotion" title="promotion" width="100%">
+</header>
+
+
+    <h1>Contact</h1>
+    <hr>
+    <p>* Ces zones sont obligatoires</p>
+    <fieldset>
+      <legend>Coordonnées</legend>
+
+    <label for="nom">Votre Nom *:</label><input type="text" name="nom" id="nom"> <br>
+    <label for="prénom">Votre prénom *:</label><input type="text" name="prénom" id="prénom"> <br>
+    
+
+    <p>Sexe*: <input type="radio" name="sex" value="Féminin">Féminin <input type="radio" name="sex" value="Masculin">Masculin <p>
+   <br>
+      
+        <label for="date">Date de naissance:</label><input type="date" name="ddn" id="date"><br>
+        <label for="nom">Code postale *:</label><input type="text" name="code postale" id="?"><br>
+        <label for="adresse">Adresse * : </label><input type="text" name="Adresse" id="adresse"><br>
+        <label for="ville">Ville *: </label><input type="text" name="ville" id="ville"> <br>
+        <label for="?">Email *:</label><input type="email" name="email" ><br>
+        
+       </fieldset>
+   <br>
+
+       <fieldset>
+          <legend>Votre demande</legend>
+        
+
+          
+          
+          <select id="couleur"> 
+              <option value="sujet" selected>Veuillez séléctinner un sujet</option>
+              <option value="question sur une produit">Question sur une produit</option>
+              <option value="reclamation">Reclamation</option>
+              <option value="autres">Autres</option>
+          </select>
+    <br>
+          <label for="votre-question" >Votre question *:</label><textarea name="questions" id="votre-question"></textarea>
+       
+        </fieldset>
+
+          <input type="checkbox" name="j'accepte" value="* J'accepte le traitement informatique de ce formuaire">* J'accepte le traitement informatique de ce formuaire
+    <br>
+          <form action="destination.php" method="post"> 
+    <br>
+         <input type="submit" value="Envoyer"> <input type="submit" value="Annuler"> 
+         </form>
+    <hr>
+
+<footer>
+  <ul type="disc">
+    <li><a href="Mantion-légale">Mention légales</a> </li>
+    <li><a href="Horaires">Horaires</a></li>
+    <li><a href="Plan-du-site">Plan du site</a></li>
+</ul>
+</footer>
+
+</body>
+
+
+</html>

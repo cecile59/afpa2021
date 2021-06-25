@@ -1,0 +1,31 @@
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nombre magique</title>
+</head>
+
+<body>
+
+  <div id="label1">Entrez votre proposition</div>
+  <input id="textBox1" value="">
+  <input type="button" id="button1" value="Verifier">
+
+  <script>
+    var element= document.getElementById("button1")
+    var texte = document.getElementById("textBox1")
+element.addEventListener("click",verif)
+
+    function verif()
+ {
+
+alert ("vous avez saisie"+texte.value)
+};
+
+
+  </script>
+
+<script src="../js/brouillons.js"></script>
+</body>
+
+</html>

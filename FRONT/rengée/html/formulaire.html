@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <script>
+            function checkForm(f) {
+                alert("Contrôle champ " + f.elements['chp'].value);
+                return false; // n’envoie pas le formulaire
+         }
+  
+ </script>
+
+</head>
+
+ <body>
+ <form action="" id="form1" onSubmit="return checkForm(this);">
+ <input type="text" name="chp" value="mimi" />
+ <input type="submit" value="Valider" />
+</form>
+
+    <!-- <title>Intercepte la validation du formulaire</title>
+
+    <script>
+        function checkForm(f) {
+            alert("Vous vous appelez : " + f.elements['nom'].value + " " + f.elements['prenom'].value);
+            return false; // ne submit pas le form 
+        }
+    </script>
+
+</head>
+
+<body>
+    <h2>Intercepte la validation du formulaire</h2>
+    <form id="form1" name="form1" onSubmit="return checkForm(this);">
+        <input type="text" name="nom" value="Dupont" />
+        <input type="text" name="prenom" value="Eric" />
+        <input type="submit" id="idSubForm1" name="subForm1" value="Connection"> <br /> -->
+
+
+
+
+        <!-- <form name="form3"> 
+            <input type="radio" name="choix" value="1" />Choix numéro 1<br /> 
+            <input type="radio" name="choix" value="2" />Choix numéro 2<br />
+            <input type="radio" name="choix" value="3" />Choix numéro 3<br /> 
+            <input type="button" name="but" value="Quel est votre choix ?" onClick="choixprop(this.form)" />
+            </form>
+       
+    </form> -->
+
+
+</body>
+
+</html>
