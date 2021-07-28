@@ -1,1 +1,0 @@
-CREATE USER 'utili1'@'adresse_ip' IDENTIFIED BY 'mimie5';
