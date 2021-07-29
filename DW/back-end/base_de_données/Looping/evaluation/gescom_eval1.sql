@@ -210,4 +210,43 @@ LIMIT 5;
 
 
 -- Q14. Afficher les coordonnées des fournisseurs pour lesquels des commandes ont été passées.
+SELECT sup_name, sup_city, sup_countries_id, sup_address, sup_zipcode, sup_phone, sup_mail ,pro_sup_id 
+FROM suppliers 
+JOIN products on suppliers.sup_id=products.pro_sup_id ;
 
+-- Q15. Quel est le chiffre d'affaires de 2020 ?
+SELECT SUM(ode_unit_price * ode_quantity *(1 - ode_discount / 100)) 
+AS TOTAL 
+FROM orders_details 
+JOIN orders ON orders_details.ode_ord_id=orders.ord_id 
+WHERE year(ord_order_date)=2020;
+
+-- Q16. Lister le total de chaque commande par total décroissant. Afficher le numéro de commande,
+-- la date, le total et le nom du client).
+SELECT ord_id, ord_order_date ,ode_quantity, cus_lastname,
+(ode_unit_price * ode_quantity) as total 
+
+FROM orders_details
+JOIN orders on orders_details.ode_ord_id=orders.ord_id;
+JOIN customers ON orders.ord_cus_id=customers.cus_id ;
+
+-- Q17. Quel est le montant du panier moyen ?
+SELECT count (ode_unit_price*ode_ord_id) /(ode_id)
+FROM orders_details;
+-- ne fonctionne pas
+
+-- Q18. La version 2020 du produit barb004 s'appelle désormais Camper et, 
+-- bonne nouvelle, son prix subit une baisse de 10%. Mettre à jour la fiche de ce produit.
+UPDATE products 
+SET pro_ref= 'Camper', pro_price=pro_price*0.9 
+WHERE pro_ref='barb004';
+
+-- Q19. L'inflation en France l'année dernière a été de 1,1%. 
+-- Appliquer cette augmentation à la gamme de parasols.
+
+UPDATE products 
+SET pro_price = pro_price * 1.01
+WHERE pro_cat_id = 25;
+
+-- Q20. Supprimer les produits non vendus de la catégorie "Tondeuses électriques".
+--  Vous devez utiliser une sous-requête sans indiquer de valeurs de clés.
