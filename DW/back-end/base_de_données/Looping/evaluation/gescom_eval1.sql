@@ -250,3 +250,12 @@ WHERE pro_cat_id = 25;
 
 -- Q20. Supprimer les produits non vendus de la catégorie "Tondeuses électriques".
 --  Vous devez utiliser une sous-requête sans indiquer de valeurs de clés.
+DELETE gescom_afpa.products FROM gescom_afpa.products 
+JOIN gescom_afpa.categories ON categories.cat_id = products.pro_cat_id
+WHERE  pro_id  NOT IN
+(SELECT ode_pro_id from orders_details)
+AND cat_name ='Tondeuses électriques'
+
+-- vf
+
+

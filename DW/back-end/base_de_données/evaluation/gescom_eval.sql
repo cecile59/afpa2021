@@ -174,3 +174,4 @@ SELECT sho_city, emp_lastname , emp_firstname
 FROM shops,employees 
 WHERE sho_city LIKE '%Compiègne%' 
 ORDER BY emp_lastname , emp_firstname ASC;
+
