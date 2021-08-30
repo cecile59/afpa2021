@@ -1,0 +1,19 @@
+
+Restauration:
+
+Microsoft Windows [version 10.0.19042.1110]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\80010-13-13>C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin
+'C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+C:\Users\80010-13-13>cd C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin
+
+C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin>mysql --user=root --password= < C:\Backup\backup_gescom_afpa.sql
+Le fichier spécifié est introuvable.
+
+C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin>mysql --user=root --password= < C:\Backup\backup_gescom_afpa_renamed_.sql
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+C:\laragon\bin\mysql\mysql-5.7.33-winx64\bin>

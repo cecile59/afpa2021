@@ -1,0 +1,6 @@
+CREATE PROCEDURE Lst_Suppliers ()
+BEGIN
+SELECT ord_status 
+  FROM orders
+  WHERE ord_status = "commande urgente";
+    END;
