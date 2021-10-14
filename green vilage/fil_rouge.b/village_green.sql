@@ -2,12 +2,12 @@ CREATE TABLE produit(
    pro_id VARCHAR(50),
    pro_description TEXT,
    pro_ref INT NOT NULL,
-   _description_long_ VARCHAR(50) NOT NULL,
+   pro_description_long_ VARCHAR(50) NOT NULL,
    pro_stock INT,
    pro_mise_a__jour VARCHAR(50),
-   pro_reduction CURRENCY,
+   pro_reduction INT,
    pro_ref_fournisseur INT,
-   pro_prix_hors_taxe CURRENCY NOT NULL,
+   pro_prix_hors_taxe INT NOT NULL,
    PRIMARY KEY(pro_id)
 );
 
@@ -15,7 +15,7 @@ CREATE TABLE clients(
    cli_id VARCHAR(50),
    cli_coef DECIMAL(6,2),
    cli_nom VARCHAR(50),
-   cli_type_payment LOGICAL,
+   cli_type_payment INT,
    cli_prenom VARCHAR(50),
    cli_mail VARCHAR(50),
    cli_ref INT,
@@ -89,7 +89,7 @@ CREATE TABLE fournisseurs(
    fou_adress VARCHAR(50),
    fou_nom VARCHAR(50),
    fou_mail VARCHAR(50),
-   fou_cat LOGICAL,
+   fou_cat VARCHAR,
    com_id VARCHAR(50) NOT NULL,
    PRIMARY KEY(fou_id),
    FOREIGN KEY(com_id) REFERENCES commande(com_id)
@@ -126,18 +126,18 @@ CREATE TABLE bon_livraison_(
    FOREIGN KEY(fac_id) REFERENCES facture(fac_id)
 );
 
-CREATE TABLE facturation_(
-   cli_id VARCHAR(50),
-   com_id VARCHAR(50),
-   PRIMARY KEY(cli_id, com_id),
-   FOREIGN KEY(cli_id) REFERENCES clients(cli_id),
-   FOREIGN KEY(com_id) REFERENCES commande(com_id)
-);
+-- CREATE TABLE facturation_(
+--    cli_id VARCHAR(50),
+--    com_id VARCHAR(50),
+--    PRIMARY KEY(cli_id, com_id),
+--    FOREIGN KEY(cli_id) REFERENCES clients(cli_id),
+--    FOREIGN KEY(com_id) REFERENCES commande(com_id)
+-- );
 
-CREATE TABLE vendre(
-   cli_id VARCHAR(50),
-   emp_id VARCHAR(50),
-   PRIMARY KEY(cli_id, emp_id),
-   FOREIGN KEY(cli_id) REFERENCES clients(cli_id),
-   FOREIGN KEY(emp_id) REFERENCES emploiyée(emp_id)
-);
+-- CREATE TABLE vendre(
+--    cli_id VARCHAR(50),
+--    emp_id VARCHAR(50),
+--    PRIMARY KEY(cli_id, emp_id),
+--    FOREIGN KEY(cli_id) REFERENCES clients(cli_id),
+--    FOREIGN KEY(emp_id) REFERENCES emploiyée(emp_id)
+-- );
